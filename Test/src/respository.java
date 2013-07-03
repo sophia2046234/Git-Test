@@ -18,6 +18,7 @@ public class respository {
 
 
 //commit 一次的事情
+//回滚，提交
     public static void main(String[] args) throws Throwable {
         File root = new File("gitme");
         if(!root.exists())
