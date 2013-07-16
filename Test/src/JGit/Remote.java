@@ -21,7 +21,7 @@ import org.eclipse.jgit.transport.RemoteConfig;
 import org.eclipse.jgit.transport.URIish;
 
 public class Remote {
-
+//	Exception in thread "main" org.eclipse.jgit.api.errors.TransportException: Nothing to push.
 	/**
 	 * @param args
 	 */
@@ -62,44 +62,41 @@ public class Remote {
 
 	}
 
-	public static void main(String[] args)  {
+	public static void main(String[] args) throws Throwable  {
 		// TODO Auto-generated method stub
-//   Remote rem = new Remote();
-//   rem.remote();
-//// System.out.println(git.push().getRefSpecs());
-//   
-//   git.push().setRemote("git://github.com/sophia2046234/Git-Test");
-//   git.push();
-//   }
+   Remote rem = new Remote();
+   rem.remote();
+   git.push().call();
+   }
 	
 
-	    File gitDir = new File("c:\\new-repo\\");
-
-	try {
-
-	      String localPath = "c:\\new-repo\\";
-	      Repository localRepo = new FileRepository(localPath + ".git");
-	      localRepo.create();
-	      Git git = new Git(localRepo);
-
-	      git.add().addFilepattern("c:\\test.txt").call();
-
-	      git.commit().setMessage("testcommit").call();
-
-	      git.push().call();
-
-	  localRepo.close();
-	} catch (IllegalStateException ise) {
-	        System.out.println("The repository already exists!");
-	} catch (IOException ioe) {
-	        System.out.println("Failed to create the repository!");
-	} catch (NoFilepatternException e) {
-	    // TODO Auto-generated catch block
-	    e.printStackTrace();
-	} catch (GitAPIException e1) {
-	    // TODO Auto-generated catch block
-	    e1.printStackTrace();
-	}
-	  
-}
+//	    File gitDir = new File("c:\\new-repo\\");
+//
+//	try {
+//
+//	      String localPath = "c:\\new-repo\\";
+//	      Repository localRepo = new FileRepository(localPath + ".git");
+//	      localRepo.create();
+//	      Git git = new Git(localRepo);
+//
+//	      git.add().addFilepattern("c:\\test1.txt").call();
+//
+//	      git.commit().setMessage("testcommit").call();
+//
+//	      git.push().call();
+//
+//	  localRepo.close();
+//	} catch (IllegalStateException ise) {
+//	        System.out.println("The repository already exists!");
+//	} catch (IOException ioe) {
+//	        System.out.println("Failed to create the repository!");
+//	} catch (NoFilepatternException e) {
+//	    // TODO Auto-generated catch block
+//	    e.printStackTrace();
+//	} catch (GitAPIException e1) {
+//	    // TODO Auto-generated catch block
+//	    e1.printStackTrace();
+//	}
+//	  
+//}
 }
