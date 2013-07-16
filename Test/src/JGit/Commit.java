@@ -23,6 +23,7 @@ public class Commit {
    	 * @throws Throwable 
      * @throws IOException  
      */  
+	//做一次尝试，配置路径
     public static String commitToGitRepository() throws Throwable { //提交到 
     	InitRespo respo= new InitRespo();
     	respo.initRespo();
